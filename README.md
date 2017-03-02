@@ -2,6 +2,20 @@
 
 to be installed in ~
 
+## To copy files to a new machine/account
+
+```
+# next command only needed on HPE network - may need equivalent on other 
+# networks that need proxies
+export http_proxy=proxy.sdc.hp.com:8080
+mkdir ~/repos
+cd ~repos
+git clone https://github.com/PaulHaldane/startup.git
+cd startup
+./install.sh
+```
+
+
 ## ssh/git
 
 The ssh setup for github (which I assume is also appropriate for gitlab etc) is
