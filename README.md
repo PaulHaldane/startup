@@ -18,9 +18,12 @@ For a Github repo called ansible1.
 ```
 ssh-keygen -f ~/.ssh/github_ansible1
 ```
-1. Add the generated public key as a deploy key for that repo on Github
+
+2. Add the generated public key as a deploy key for that repo on Github
+
 Do this using the web interface under Settings.
-1. Add a new stanza to the .ssh/config file
+
+3. Add a new stanza to the .ssh/config file
 ```
 Host github-ansible1
 	Hostname        github.com
@@ -28,7 +31,8 @@ Host github-ansible1
 	IdentityFile    ~/.ssh/github_ansible1
 	IdentitiesOnly	yes
 ```
-1. Clone the repo using the hostname defined in the new stanza
+
+4. Clone the repo using the hostname defined in the new stanza
 ```
 git clone git@github-ansible1:PaulHaldane/ansible1.git
 ```
