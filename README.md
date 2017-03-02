@@ -20,8 +20,7 @@ ssh-keygen -f ~/.ssh/github_ansible1
 ```
 
 2. Add the generated public key as a deploy key for that repo on Github
-
-Do this using the web interface under Settings.
+ Do this using the web interface under Settings.
 
 3. Add a new stanza to the .ssh/config file
  ```
