@@ -2,6 +2,8 @@
 
 to be installed in ~
 
+## ssh/git
+
 The ssh setup for github (which I assume is also appropriate for gitlab etc) is
 based on the answers to
 http://stackoverflow.com/questions/3225862/multiple-github-accounts-ssh-config
@@ -12,15 +14,15 @@ For example:
 
 For a Github repo called ansible1.
 
-# Generate a new ssh key
+1. Generate a new ssh key
 
 	ssh-keygen -f ~/.ssh/github_ansible1
 
-# Add the generated public key as a deploy key for that repo on Github
+1. Add the generated public key as a deploy key for that repo on Github
 
 Do this using the web interface under Settings.
 
-# Add a new stanza to the .ssh/config file
+1. Add a new stanza to the .ssh/config file
 
 	Host github-ansible1
 		Hostname        github.com
@@ -28,7 +30,7 @@ Do this using the web interface under Settings.
 		IdentityFile    ~/.ssh/github_ansible1
 		IdentitiesOnly	yes
 
-# Clone the repo using the hostname defined in the new stanza
+1. Clone the repo using the hostname defined in the new stanza
 
 	git clone git@github-ansible1:PaulHaldane/ansible1.git
 
