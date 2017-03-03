@@ -119,3 +119,4 @@ fi
 export LESS=-eq
 export EDITOR=vi
 export VISUAL=$EDITOR
+umask 022
