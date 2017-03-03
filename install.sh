@@ -6,3 +6,4 @@ if [ ! -f README.md ]; then
 fi
 
 tar --exclude README.md --exclude .git -cpBvf - . | ( cd ~ && tar xpBf - )
+chmod 600 ~/.ssh/config
