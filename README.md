@@ -9,7 +9,7 @@ to be installed in ~
 # networks that need proxies
 export https_proxy=proxy.sdc.hp.com:8080
 mkdir ~/repos
-cd ~repos
+cd ~/repos
 git clone https://github.com/PaulHaldane/startup.git
 cd startup
 ./install.sh
