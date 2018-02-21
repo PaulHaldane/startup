@@ -97,7 +97,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export LESS=-eq
+export LESS=-eqR
 export EDITOR=vi
 export VISUAL=$EDITOR
 umask 022
