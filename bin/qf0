@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# use the built in search index to find files matching supplied
+# args in/under current directory and then send the file names
+# to stdout separated by NULLs (for processing using `xargs -0`).
+# File paths are munged so they're relative to current directory
+# rather than absolute paths returned by mdfind.
+
+# The perl at the end is to remove the stray newline added by sed.
+
+mdfind -0 -onlyin . "$@" | sed "s/$(pwd | sed -e 's/\//\\\//g')\///g" | perl -ne 'chop; print $_;'
