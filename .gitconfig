@@ -3,5 +3,10 @@
 	name = Paul Haldane
 [push]
 	default = simple
+[core]
+	pager = less -F -S -R -i -X
 [alias]
-        lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  lod = log --pretty=\"%h %ad (%cr)%x09 %an: %s\"
+  lod2 = log --pretty=\"tformat:%h %ci\"
+  lod3 = log --pretty=\"%h %ci %an%x09%s\"
