@@ -10,3 +10,5 @@
   lod = log --pretty=\"%h %ad (%cr)%x09 %an: %s\"
   lod2 = log --pretty=\"tformat:%h %ci\"
   lod3 = log --pretty=\"%h %ci %an%x09%s\"
+[init]
+	defaultBranch = main
