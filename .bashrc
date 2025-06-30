@@ -16,8 +16,10 @@ shopt -s histappend
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
-
+# Timestamped history
 HISTTIMEFORMAT='%d/%m %H:%M '
+# Host specific history file (useful on NFS mounted home directories)
+HISTFILE=~/.bash_history.$(uname -n)
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
